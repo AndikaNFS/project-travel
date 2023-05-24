@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import LoginSignUp from './pages/LoginSignUp';
+import Login from './components/Authentication/Login';
+import Register from './components/Authentication/Register';
 
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<LoginSignUp />} />
-      </Routes>
+    <LoginSignUp />
+    <Routes>
+    </Routes>
     </BrowserRouter>
   );
 }
