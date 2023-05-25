@@ -4,6 +4,7 @@ import Center from '../parts/HomePage/Center';
 import Right from '../parts/HomePage/Right';
 // import sideRight from "../parts/HomePage/sideRight";
 console.log('console log develop');
+console.log('1231');
 const HomePage = () => {
   return (
     <div className="container pt-4 mx-auto">
@@ -12,7 +13,7 @@ const HomePage = () => {
           <Sidebar />
         </div>
         <div className="grid flex-grow w-96">
-          <div className="grid w-full bg-green-100  rounded-2xl">
+          <div className="grid w-full bg-green-100 rounded-2xl">
             <Center />
           </div>
         </div>
