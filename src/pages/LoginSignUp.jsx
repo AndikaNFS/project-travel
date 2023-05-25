@@ -20,15 +20,8 @@ function LoginSignUp() {
       <div className="body">
         <div class="main">
           <input type="checkbox" id="chk" aria-hidden="true" />
+
           <div class="signup">
-            <h1>
-              NANTI INI MENURUT GUA BANNER PROMOSI KEK TOKPED GTU / pas buka
-              tampilan awal ga harus login dlu biar user yang ngunjuin website
-              ini ga harus bikin aku Nah nanti kalo udah ada ini adain fitur
-              dahboard usernya buat check pesanan dia, nah ini udah dibikin di
-              bagian figma yang lu buat sblmnya, nah ini menurut gua banner
-              promosi buat narik keep learning braderrrrr saling belajar
-            </h1>
             <form action="" onSubmit={handleSubmitRegister}>
               <label for="chk" aria-hidden="true">
                 Sign Up
@@ -81,6 +74,14 @@ function LoginSignUp() {
             </form>
           </div>
         </div>
+        <h1 className="ml-4 text-white w-60">
+          NANTI INI MENURUT GUA BANNER PROMOSI KEK TOKPED GTU / pas buka
+          tampilan awal ga harus login dlu biar user yang ngunjuin website ini
+          ga harus bikin aku Nah nanti kalo udah ada ini adain fitur dahboard
+          usernya buat check pesanan dia, nah ini udah dibikin di bagian figma
+          yang lu buat sblmnya, nah ini menurut gua banner promosi buat narik
+          keep learning braderrrrr saling belajar
+        </h1>
       </div>
     </>
     // <div className="main">
