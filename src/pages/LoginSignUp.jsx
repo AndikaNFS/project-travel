@@ -1,7 +1,7 @@
-import React from "react";
-import "../assets/css/login.css";
-import Login from "../components/Authentication/Login";
-import Register from "../components/Authentication/Register";
+import React from 'react';
+import '../assets/css/login.css';
+import Login from '../components/Authentication/Login';
+import Register from '../components/Authentication/Register';
 
 function LoginSignUp() {
   const { email, setEmail, password, setPassword, handleSubmit } = Login();
@@ -21,6 +21,14 @@ function LoginSignUp() {
         <div class="main">
           <input type="checkbox" id="chk" aria-hidden="true" />
           <div class="signup">
+            <h1>
+              NANTI INI MENURUT GUA BANNER PROMOSI KEK TOKPED GTU / pas buka
+              tampilan awal ga harus login dlu biar user yang ngunjuin website
+              ini ga harus bikin aku Nah nanti kalo udah ada ini adain fitur
+              dahboard usernya buat check pesanan dia, nah ini udah dibikin di
+              bagian figma yang lu buat sblmnya, nah ini menurut gua banner
+              promosi buat narik keep learning braderrrrr saling belajar
+            </h1>
             <form action="" onSubmit={handleSubmitRegister}>
               <label for="chk" aria-hidden="true">
                 Sign Up
