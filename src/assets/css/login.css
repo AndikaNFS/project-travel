@@ -1,4 +1,4 @@
-body {
+.body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -40,7 +40,7 @@ label {
 
 input {
   width: 60%;
-  height: 30px;
+  height: 20px;
   background: #e0dede;
   justify-content: center;
   display: flex;
