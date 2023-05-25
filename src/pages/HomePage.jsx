@@ -16,8 +16,8 @@ const HomePage = () => {
             <Center />
           </div>
         </div>
-        <div className="flex-grow grid gap-4">
-          <div className=" ">
+        <div className="w-96 grid p-3 h-screen sticky top-0">
+          <div className="overflow-auto">
             <Right />
           </div>
         </div>

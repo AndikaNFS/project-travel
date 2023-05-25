@@ -5,6 +5,7 @@ import LoginSignUp from './pages/LoginSignUp';
 import Login from './components/Authentication/Login';
 import Register from './components/Authentication/Register';
 import HomePage from './pages/HomePage';
+import 'tailwindcss/tailwind.css';
 
 
 function App() {

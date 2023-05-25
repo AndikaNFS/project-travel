@@ -45,7 +45,7 @@ function Center() {
                   type="search"
                   id="default-search"
                   class="block w-64 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500  dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Search Mockups, Logos..."
+                  placeholder="Search Destination, Hotel..."
                   required
                 />
               </div>
