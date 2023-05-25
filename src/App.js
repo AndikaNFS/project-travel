@@ -1,9 +1,16 @@
 import './App.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 =======
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 >>>>>>> develop
+=======
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
+=======
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+>>>>>>> a42cf5638f142ae9be57bf74268ba63307a4d3ae
+>>>>>>> feature/slicing
 import LoginSignUp from './pages/LoginSignUp';
 import Login from './components/Authentication/Login';
 import Register from './components/Authentication/Register';
