@@ -33,7 +33,7 @@ const menus = [
 function Sidebar() {
   return (
     <>
-      <div className="bg-gray-200 text-gray-500 h-screen w-full flex flex-col p-8">
+      <div className=" text-gray-500 h-screen w-full flex flex-col p-8">
         <img src="/images/moonton.svg" alt="logo" />
         <div className="flex-grow pt-8 ">
           {menus.map((menu) => (

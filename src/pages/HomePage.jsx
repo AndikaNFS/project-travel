@@ -1,20 +1,25 @@
 import React from "react";
-import Sidebar from "../parts/Sidebar";
+import Sidebar from "../parts/HomePage/Sidebar";
+import Center from "../parts/HomePage/Center";
+import Right from "../parts/HomePage/Right";
+// import sideRight from "../parts/HomePage/sideRight";
 
 const HomePage = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto pt-4">
       <div className="flex">
-        <div className="w-64 bg-gray-800 text-white">
+        <div className="w-64 text-white h-screen sticky top-0">
           <Sidebar />
         </div>
         <div className="flex-grow w-96 grid">
-          <div className=" bg-gray-400 w-full grid justify-center">
-            Column1{" "}
+          <div className=" bg-green-100 w-full grid rounded-2xl">
+            <Center />
           </div>
         </div>
         <div className="flex-grow grid gap-4">
-          <div className="bg-gray-300 grid justify-center ">Column 2</div>
+          <div className=" ">
+            <Right />
+          </div>
         </div>
       </div>
     </div>
