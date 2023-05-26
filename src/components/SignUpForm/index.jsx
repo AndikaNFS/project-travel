@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { setSignUp } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
-// import "";
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/SignUpForm/index.jsx
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
@@ -15,6 +15,12 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 >>>>>>> 155c3ed (slicing sign-in & sign-up):src/components/SignUp/index.jsx
+=======
+const SignUpForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+>>>>>>> 96e2c3e (update form login)
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -38,97 +44,101 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container flex flex-col items-center justify-center w-full h-screen mx-auto bg-slate-white">
+    <div className="container flex items-center justify-center w-full h-screen mx-auto bg-slate-white">
       <div className="flex w-full justify-center h-2/3">
         <img
           src="/images/sign.jpg"
           alt=""
           className="h-full w-96 relative left-3 z-0"
         />
-        <div className="flex flex-col justify-center w-full max-w-lg bg-gray-300 rounded-s-xl z-10">
-          <h1 className="py-3 mb-4 top-0 text-center text-3xl font-sans font-semibold text-gray-700">
-            Create Account
-          </h1>
-          <div className="flex justify-between w-full p-3">
-            {/* <div className="flex bg-white"> */}
-            <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
-              <img
-                src="/images/icon-google.svg"
-                alt=""
-                className="h-6 w-6 mr-2"
-              />
-              <span>Sign up with Google</span>
+        <div className="w-full max-w-lg bg-gray-300 rounded-s-xl z-10 ">
+          <div className="flex-col justify-center mt-4">
+            <h1 className="py-3 mb-4 text-center text-3xl font-sans font-semibold text-gray-700">
+              Create Account
+            </h1>
+            <div className="flex justify-between w-full p-3">
+              {/* <div className="flex bg-white"> */}
+              <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
+                <img
+                  src="/images/icon-google.svg"
+                  alt=""
+                  className="h-6 w-6 mr-2"
+                />
+                <span>Sign up with Google</span>
+              </div>
+              <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
+                <img
+                  src="/images/icon-facebook.png"
+                  alt=""
+                  className="mr-2 h-6 w-6"
+                />
+                <span>Sign up with Facebook</span>
+              </div>
+              {/* </div> */}
             </div>
-            <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
-              <img
-                src="/images/icon-facebook.png"
-                alt=""
-                className="mr-2 h-6 w-6"
-              />
-              <span>Sign up with Facebook</span>
-            </div>
-            {/* </div> */}
-          </div>
-          <span className="text-lg text-gray-700 flex justify-center mb-4">
-            -OR-
-          </span>
-          <div className="flex justify-center">
-            <div className="flex flex-col gap-2 px-4">
-              {/* <p>Nama</p> */}
-              <input
-                type="text"
-                placeholder="Fullname"
-                className="max-w-md px-2 py-2 rounded-md w-80 h-9"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="flex justify-center mt-4">
-            <div className="flex flex-col gap-2 px-4">
-              {/* <p>Email</p> */}
-              <input
-                type="text"
-                placeholder="Email"
-                className="max-w-md px-2 py-2 rounded-md w-80 h-9"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="flex justify-center mt-4">
-            <div className="flex flex-col gap-2 px-4">
-              {/* <p>Password</p> */}
-              <input
-                type="password"
-                placeholder="Password"
-                className="max-w-md px-2 py-2 rounded-md w-80 h-9"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-          </div>
-          <button
-            className="p-3 mx-auto mt-4 mb-4  flex items-center text-black bg-[#D5DFF6] rounded-lg w-64"
-            onClick={onSubmit}
-          >
-            Create Account
-          </button>
-          <div className="ml-2">
-            <span className="text-sm text-gray-500">
-              Already have an account? &nbsp;
+            <span className="text-sm text-gray-600 flex justify-center mb-4">
+              -OR-
             </span>
-            <Link
-              to="/sign-in"
-              className="mx-auto mb-4 text-blue-600 underline underline-offset-4"
+            <div className="">
+              <div className=" gap-2 px-4">
+                {/* <p>Nama</p> */}
+                <input
+                  type="text"
+                  placeholder="Fullname"
+                  className="max-w-md px-2 py-2 rounded-md w-80 h-9"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className=" justify-center ">
+              <div className=" px-4">
+                {/* <p>Email</p> */}
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="max-w-md px-2 py-2 rounded-md w-80 h-9"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className=" justify-center ">
+              <div className="px-4">
+                {/* <p>Password</p> */}
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="max-w-md px-2 py-2 rounded-md w-80 h-9"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <button
+              className="p-3 mx-auto mt-4 mb-4  flex items-center text-gray-700 bg-[#D5DFF6] rounded-lg w-64"
+              onClick={onSubmit}
             >
-              Sign In
-            </Link>
+              Create Account
+            </button>
+            <div className="ml-2">
+              <span className="text-sm text-gray-500">
+                Already have an account? &nbsp;
+              </span>
+              <Link
+                to="/sign-in"
+                className="mx-auto mb-4 text-blue-600 underline underline-offset-4"
+              >
+                Sign In
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 };
+// };
 
 export default SignUpForm;

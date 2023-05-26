@@ -1,7 +1,8 @@
 import React from "react";
+import Header from "../parts/Welcome/Header";
 
 function Welcome() {
-  return <div>Welcome</div>;
+  return <Header />;
 }
 
 export default Welcome;
