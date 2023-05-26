@@ -50,21 +50,21 @@ const Calendar = () => {
           {i}
         </div>
       );
-      day.push(
-        <div
-          key={i}
-          className={`text-center p-2 cursor-pointer ${
-            isCurrentMonth ? "text-gray-800" : "text-gray-400"
-          } ${
-            date.toDateString() === selectedDate.toDateString()
-              ? "bg-blue-500 text-white"
-              : ""
-          }`}
-          onClick={() => handleDateClick(date)}
-        >
-          {i}
-        </div>
-      );
+      // day.push(
+      //   <div
+      //     key={i}
+      //     className={`text-center p-2 cursor-pointer ${
+      //       isCurrentMonth ? "text-gray-800" : "text-gray-400"
+      //     } ${
+      //       date.toDateString() === selectedDate.toDateString()
+      //         ? "bg-blue-500 text-white"
+      //         : ""
+      //     }`}
+      //     onClick={() => handleDateClick(date)}
+      //   >
+      //     {i}
+      //   </div>
+      // );
     }
 
     return days;
