@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-console.log('develop');
 
 const Calendar = () => {
   const [selectedRange, setSelectedRange, setSelectedDate, selectedDate] =
