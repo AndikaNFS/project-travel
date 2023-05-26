@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/SignInForm/index.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -29,6 +30,18 @@ const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 >>>>>>> 96e2c3e (update form login)
+=======
+// <<<<<<< HEAD:src/components/SignIn/index.jsx
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { setSignIn } from "../../services/auth";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
+
+const SignInForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+>>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -125,6 +138,7 @@ const SignInForm = () => {
           </div>
           {/* </div> */}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/SignInForm/index.jsx
         <div className="flex flex-col gap-2 px-4">
           <p>Password</p>
@@ -156,6 +170,8 @@ const SignInForm = () => {
         </Link>
 =======
 >>>>>>> 155c3ed (slicing sign-in & sign-up):src/components/SignIn/index.jsx
+=======
+>>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
       </div>
     </div>
   );

@@ -50,6 +50,7 @@ const Calendar = () => {
         </div>,
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
       days.push(
         <div
           key={i}
@@ -66,6 +67,8 @@ const Calendar = () => {
         </div>,
       );
 =======
+=======
+>>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
       // day.push(
       //   <div
       //     key={i}
@@ -81,7 +84,10 @@ const Calendar = () => {
       //     {i}
       //   </div>
       // );
+<<<<<<< HEAD
 >>>>>>> 155c3ed (slicing sign-in & sign-up)
+=======
+>>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
     }
 
     return days;

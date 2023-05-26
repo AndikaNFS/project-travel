@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD:src/components/SignUpForm/index.jsx
 const SignUpForm = () => {
+<<<<<<< HEAD
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -21,6 +22,11 @@ const SignUpForm = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 >>>>>>> 96e2c3e (update form login)
+=======
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+>>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
   const navigate = useNavigate();
 
   const onSubmit = async () => {
