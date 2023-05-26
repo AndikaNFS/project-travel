@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import SignIn from './pages/sign-in';
 import SignUp from './pages/sign-up';
 import RequestResetPassword from './pages/request-reset-password';
+import ResetPassword from './pages/reset-password';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           path="request-reset-password"
           element={<RequestResetPassword />}
         />
+        <Route path="reset-password/:id/:token" element={<ResetPassword />} />
 
         <Route path="/home" element={<HomePage />} />
       </Routes>

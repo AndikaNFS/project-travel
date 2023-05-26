@@ -1,43 +1,44 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { setRequestResetPassword } from '../services/auth';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { setResetPassword } from '../services/auth';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const RequestResetPassword = () => {
-  const [email, setEmail] = useState('');
+const ResetPassword = () => {
+  let { id, token } = useParams();
+
+  console.log(id);
+  console.log(token);
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const onSubmit = async () => {
     const data = {
-      email: email,
+      _id: id,
+      password: password,
+      token: token,
     };
-    if (!email) {
-      alert('Masukan email anda!');
+    if (!password) {
+      alert('Masukan password baru anda!');
     } else {
-      const responseEmail = await setRequestResetPassword(data);
-      if (responseEmail.error) {
-        alert(responseEmail.message);
-      } else {
-        alert('Request Reset Password Success, Check your email address!');
-        navigate('/');
-      }
+      const responsePassword = await setResetPassword(data);
+      alert(responsePassword.message);
+      navigate('/');
     }
   };
-
   return (
     <div className="container flex flex-col items-center justify-center w-full h-screen mx-auto bg-slate-white">
       <div className="flex flex-col w-full max-w-lg bg-gray-200">
         <h1 className="py-3 mb-4 text-center text-blue-600 bg-blue-300">
-          Request Reset Password
+          Reset Password
         </h1>
         <div className="flex flex-col gap-2 px-4">
           <div className="flex flex-col gap-2 px-4">
-            <p>Email</p>
+            <p>Reset</p>
             <input
               type="text"
-              placeholder="Masukan email anda"
+              placeholder="Masukan password baru"
               className="max-w-md px-2 py-2 rounded-md"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
@@ -53,4 +54,4 @@ const RequestResetPassword = () => {
   );
 };
 
-export default RequestResetPassword;
+export default ResetPassword;

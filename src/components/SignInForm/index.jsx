@@ -66,6 +66,12 @@ const SignInForm = () => {
         >
           Belum Punya Akun
         </Link>
+        <Link
+          to="/request-reset-password"
+          className="mx-auto mb-4 text-blue-600 underline underline-offset-4"
+        >
+          Lupa Password
+        </Link>
       </div>
     </div>
   );

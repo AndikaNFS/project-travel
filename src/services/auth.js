@@ -22,17 +22,25 @@ export async function setSignUp(data) {
   });
 }
 
-export async function getEmail(data) {
-  const url = `${ROOT_API}/${API_VERSION}/auth/get-email`;
-  const response = await axios.get(url);
-  return response.data;
-}
-
 export async function setRequestResetPassword(data) {
   const url = `${ROOT_API}/${API_VERSION}/auth/request-reset-password`;
   return callAPI({
     url,
     method: 'POST',
     data,
+  });
+}
+
+export async function setResetPassword(data) {
+  const url = `${ROOT_API}/${API_VERSION}/auth/reset-password/${data._id}/${data.token}`;
+
+  console.log(data);
+
+  console.log(url);
+  return callAPI({
+    url,
+    method: 'POST',
+    data,
+    token: true,
   });
 }
