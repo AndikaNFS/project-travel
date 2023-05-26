@@ -1,32 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { setSignUp } from "../../services/auth";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { setSignUp } from '../../services/auth';
+import { useNavigate } from 'react-router-dom';
 
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/SignUpForm/index.jsx
 const SignUpForm = () => {
-<<<<<<< HEAD
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
-=======
-const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
->>>>>>> 155c3ed (slicing sign-in & sign-up):src/components/SignUp/index.jsx
-=======
-const SignUpForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
->>>>>>> 96e2c3e (update form login)
-=======
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
->>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -37,56 +17,56 @@ const SignUpForm = () => {
     };
     console.log(data);
     if (!name || !password || !name) {
-      alert("Masukan nama, password, email anda");
+      alert('Masukan nama, password, email anda');
     } else {
       const response = await setSignUp(data);
       if (response.error) {
         alert(response.message);
       } else {
-        alert("Sign Up Success!");
-        navigate("/sign-in");
+        alert('Sign Up Success!');
+        navigate('/sign-in');
       }
     }
   };
 
   return (
     <div className="container flex items-center justify-center w-full h-screen mx-auto bg-slate-white">
-      <div className="flex w-full justify-center h-2/3">
+      <div className="flex justify-center w-full h-2/3">
         <img
           src="/images/sign.jpg"
           alt=""
-          className="h-full w-96 relative left-3 z-0"
+          className="relative z-0 h-full w-96 left-3"
         />
-        <div className="w-full max-w-lg bg-gray-300 rounded-s-xl z-10 ">
+        <div className="z-10 w-full max-w-lg bg-gray-300 rounded-s-xl ">
           <div className="flex-col justify-center mt-4">
-            <h1 className="py-3 mb-4 text-center text-3xl font-sans font-semibold text-gray-700">
+            <h1 className="py-3 mb-4 font-sans text-3xl font-semibold text-center text-gray-700">
               Create Account
             </h1>
             <div className="flex justify-between w-full p-3">
               {/* <div className="flex bg-white"> */}
-              <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
+              <div className="inline-flex items-center p-2 ring-1 ring-slate-400 rounded-xl">
                 <img
                   src="/images/icon-google.svg"
                   alt=""
-                  className="h-6 w-6 mr-2"
+                  className="w-6 h-6 mr-2"
                 />
                 <span>Sign up with Google</span>
               </div>
-              <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
+              <div className="inline-flex items-center p-2 ring-1 ring-slate-400 rounded-xl">
                 <img
                   src="/images/icon-facebook.png"
                   alt=""
-                  className="mr-2 h-6 w-6"
+                  className="w-6 h-6 mr-2"
                 />
                 <span>Sign up with Facebook</span>
               </div>
               {/* </div> */}
             </div>
-            <span className="text-sm text-gray-600 flex justify-center mb-4">
+            <span className="flex justify-center mb-4 text-sm text-gray-600">
               -OR-
             </span>
             <div className="">
-              <div className=" gap-2 px-4">
+              <div className="gap-2 px-4 ">
                 {/* <p>Nama</p> */}
                 <input
                   type="text"
@@ -97,8 +77,8 @@ const SignUpForm = () => {
                 />
               </div>
             </div>
-            <div className=" justify-center ">
-              <div className=" px-4">
+            <div className="justify-center ">
+              <div className="px-4 ">
                 {/* <p>Email</p> */}
                 <input
                   type="text"
@@ -109,7 +89,7 @@ const SignUpForm = () => {
                 />
               </div>
             </div>
-            <div className=" justify-center ">
+            <div className="justify-center ">
               <div className="px-4">
                 {/* <p>Password</p> */}
                 <input

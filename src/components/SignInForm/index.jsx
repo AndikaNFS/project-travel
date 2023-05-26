@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/SignInForm/index.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
@@ -10,38 +7,6 @@ import { setSignIn } from '../../services/auth';
 const SignInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-=======
-=======
-// <<<<<<< HEAD:src/components/SignIn/index.jsx
->>>>>>> 96e2c3e (update form login)
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { setSignIn } from "../../services/auth";
-import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
-
-<<<<<<< HEAD
-const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
->>>>>>> 155c3ed (slicing sign-in & sign-up):src/components/SignIn/index.jsx
-=======
-const SignInForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
->>>>>>> 96e2c3e (update form login)
-=======
-// <<<<<<< HEAD:src/components/SignIn/index.jsx
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { setSignIn } from "../../services/auth";
-import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
-
-const SignInForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
->>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -50,53 +15,53 @@ const SignInForm = () => {
       password: password,
     };
     if (!email || !password) {
-      alert("Masukan email dan password");
+      alert('Masukan email dan password');
     }
     const response = await setSignIn(data);
     if (response.error) {
       alert(response.message);
     } else {
-      alert("Login Berhasil");
+      alert('Login Berhasil');
       const token = response.data.token;
       const tokenBase64 = btoa(token);
-      Cookies.set("token", tokenBase64, { expires: 1 });
-      navigate("/home");
+      Cookies.set('token', tokenBase64, { expires: 1 });
+      navigate('/home');
     }
   };
   return (
     <div className="container flex flex-col justify-center w-full h-screen mx-auto">
-      <div className="flex w-full justify-center h-2/3">
+      <div className="flex justify-center w-full h-2/3">
         <img
           src="/images/sign.jpeg"
           alt=""
-          className="h-full w-96 relative left-3 z-0"
+          className="relative z-0 h-full w-96 left-3"
         />
-        <div className="w-full max-w-lg bg-gray-300 rounded-s-xl z-10 ">
+        <div className="z-10 w-full max-w-lg bg-gray-300 rounded-s-xl ">
           <div className="mt-10">
-            <h1 className="py-3 mb-4 top-0 text-center text-3xl font-sans font-semibold text-gray-700 ">
+            <h1 className="top-0 py-3 mb-4 font-sans text-3xl font-semibold text-center text-gray-700 ">
               Sign In
             </h1>
             <div className="flex justify-between w-full p-3">
               {/* <div className="flex bg-white"> */}
-              <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
+              <div className="inline-flex items-center p-2 ring-1 ring-slate-400 rounded-xl">
                 <img
                   src="/images/icon-google.svg"
                   alt=""
-                  className="h-6 w-6 mr-2"
+                  className="w-6 h-6 mr-2"
                 />
                 <span>Sign up with Google</span>
               </div>
-              <div className="inline-flex items-center ring-1 ring-slate-400 p-2 rounded-xl">
+              <div className="inline-flex items-center p-2 ring-1 ring-slate-400 rounded-xl">
                 <img
                   src="/images/icon-facebook.png"
                   alt=""
-                  className="mr-2 h-6 w-6"
+                  className="w-6 h-6 mr-2"
                 />
                 <span>Sign up with Facebook</span>
               </div>
               {/* </div> */}
             </div>
-            <span className="text-sm text-gray-600 flex justify-center mb-4">
+            <span className="flex justify-center mb-4 text-sm text-gray-600">
               -OR-
             </span>
             <div className="">
@@ -112,7 +77,7 @@ const SignInForm = () => {
               </div>
             </div>
             <div className="mt-4">
-              <div className=" px-4">
+              <div className="px-4 ">
                 {/* <p>Password</p> */}
                 <input
                   type="password"
@@ -136,42 +101,7 @@ const SignInForm = () => {
               Belum Punya Akun
             </Link>
           </div>
-          {/* </div> */}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/SignInForm/index.jsx
-        <div className="flex flex-col gap-2 px-4">
-          <p>Password</p>
-          <input
-            type="password"
-            placeholder="Enter password"
-            className="max-w-md px-2 py-2 rounded-md"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button
-          className="p-3 mx-auto mt-2 mb-4 text-white bg-blue-700 rounded-lg w-28"
-          onClick={onSubmit}
-        >
-          Masuk
-        </button>
-        <Link
-          to="/register"
-          className="mx-auto mb-4 text-blue-600 underline underline-offset-4"
-        >
-          Belum Punya Akun
-        </Link>
-        <Link
-          to="/request-reset-password"
-          className="mx-auto mb-4 text-blue-600 underline underline-offset-4"
-        >
-          Lupa Password
-        </Link>
-=======
->>>>>>> 155c3ed (slicing sign-in & sign-up):src/components/SignIn/index.jsx
-=======
->>>>>>> 96e2c3e6395b9fc194d7c30bfc55c4caeb107599
       </div>
     </div>
   );
