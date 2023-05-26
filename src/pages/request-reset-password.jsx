@@ -34,7 +34,8 @@ const RequestResetPassword = () => {
       if (responseEmail.error) {
         alert(responseEmail.message);
       } else {
-        alert('sukses');
+        alert('Request Reset Password Success, Check your email address!');
+        navigate('/');
       }
       //   const responseEmail = await setSignIn(data);
       //   if (responseEmail.error) {
