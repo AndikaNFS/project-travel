@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/SignIn/index.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { setSignIn } from "../../services/auth";
@@ -7,6 +8,17 @@ import { useNavigate } from "react-router-dom";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
+import { setSignIn } from '../../services/auth';
+
+const SignInForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+>>>>>>> 21a1fc7b18727caef758e9cd1dc17a84eff0f7c3:src/components/SignInForm/index.jsx
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -28,7 +40,6 @@ const SignIn = () => {
       navigate("/home");
     }
   };
-
   return (
     <div className="container flex flex-col items-center justify-center w-full h-screen mx-auto">
       <div className="flex w-full justify-center h-2/3">
@@ -84,4 +95,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignInForm;

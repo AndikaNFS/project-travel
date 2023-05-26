@@ -4,10 +4,17 @@ import { setSignUp } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
 // import "";
 
+<<<<<<< HEAD:src/components/SignUp/index.jsx
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+=======
+const SignUpForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+>>>>>>> 21a1fc7b18727caef758e9cd1dc17a84eff0f7c3:src/components/SignUpForm/index.jsx
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -124,4 +131,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpForm;
