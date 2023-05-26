@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Calendar = () => {
   const [selectedRange, setSelectedRange, setSelectedDate, selectedDate] =
@@ -43,27 +43,27 @@ const Calendar = () => {
         <div
           key={i}
           className={`text-center p-2 cursor-pointer hover:bg-blue-400 ${
-            isCurrentMonth ? "text-gray-800" : "text-gray-400"
-          } ${isWithinSelectedRange(date) ? "bg-blue-500 text-white" : ""}`}
+            isCurrentMonth ? 'text-gray-800' : 'text-gray-400'
+          } ${isWithinSelectedRange(date) ? 'bg-blue-500 text-white' : ''}`}
           onClick={() => handleDateClickRange(date)}
         >
           {i}
-        </div>
+        </div>,
       );
-      day.push(
+      days.push(
         <div
           key={i}
           className={`text-center p-2 cursor-pointer ${
-            isCurrentMonth ? "text-gray-800" : "text-gray-400"
+            isCurrentMonth ? 'text-gray-800' : 'text-gray-400'
           } ${
             date.toDateString() === selectedDate.toDateString()
-              ? "bg-blue-500 text-white"
-              : ""
+              ? 'bg-blue-500 text-white'
+              : ''
           }`}
           onClick={() => handleDateClick(date)}
         >
           {i}
-        </div>
+        </div>,
       );
     }
 
@@ -72,15 +72,15 @@ const Calendar = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Calendar</h1>
+      <h1 className="mb-4 text-2xl font-bold">Calendar</h1>
       <div className="grid grid-cols-7 gap-2">
-        <div className="text-center font-bold">Sun</div>
-        <div className="text-center font-bold">Mon</div>
-        <div className="text-center font-bold">Tue</div>
-        <div className="text-center font-bold">Wed</div>
-        <div className="text-center font-bold">Thu</div>
-        <div className="text-center font-bold">Fri</div>
-        <div className="text-center font-bold">Sat</div>
+        <div className="font-bold text-center">Sun</div>
+        <div className="font-bold text-center">Mon</div>
+        <div className="font-bold text-center">Tue</div>
+        <div className="font-bold text-center">Wed</div>
+        <div className="font-bold text-center">Thu</div>
+        <div className="font-bold text-center">Fri</div>
+        <div className="font-bold text-center">Sat</div>
         {getCalendarDays()}
       </div>
     </div>
