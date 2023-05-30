@@ -1,7 +1,7 @@
-import React from 'react';
-import '../assets/css/login.css';
-import Login from '../components/Authentication/Login';
-import Register from '../components/Authentication/Register';
+import React from "react";
+// import '../assets/css/login.css';
+import Login from "../components/Authentication/Login";
+import Register from "../components/Authentication/Register";
 
 function LoginSignUp() {
   const { email, setEmail, password, setPassword, handleSubmit } = Login();
@@ -17,7 +17,7 @@ function LoginSignUp() {
 
   return (
     <>
-      <div className="body">
+      <div style={{ background: "#D3D3D3" }}>
         <div class="main">
           <input type="checkbox" id="chk" aria-hidden="true" />
 

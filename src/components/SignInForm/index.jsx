@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom';
-import { setSignIn } from '../../services/auth';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
+import { setSignIn } from "../../services/auth";
 
 const SignInForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -15,28 +15,28 @@ const SignInForm = () => {
       password: password,
     };
     if (!email || !password) {
-      alert('Masukan email dan password');
+      alert("Masukan email dan password");
     }
     const response = await setSignIn(data);
     if (response.error) {
       alert(response.message);
     } else {
-      alert('Login Berhasil');
+      alert("Login Berhasil");
       const token = response.data.token;
       const tokenBase64 = btoa(token);
-      Cookies.set('token', tokenBase64, { expires: 1 });
-      navigate('/home');
+      Cookies.set("token", tokenBase64, { expires: 1 });
+      navigate("/home");
     }
   };
   return (
     <div className="container flex flex-col justify-center w-full h-screen mx-auto">
       <div className="flex justify-center w-full h-2/3">
         <img
-          src="/images/sign.jpeg"
+          src="/images/sign-2.jpg"
           alt=""
           className="relative z-0 h-full w-96 left-3"
         />
-        <div className="z-10 w-full max-w-lg bg-gray-300 rounded-s-xl ">
+        <div className="z-10 w-full max-w-lg bg-white rounded-s-xl ">
           <div className="mt-10">
             <h1 className="top-0 py-3 mb-4 font-sans text-3xl font-semibold text-center text-gray-700 ">
               Sign In
@@ -64,20 +64,18 @@ const SignInForm = () => {
             <span className="flex justify-center mb-4 text-sm text-gray-600">
               -OR-
             </span>
-            <div className="">
-              <div className="px-4">
+            <div className="flex flex-col items-center">
+              <div className="px-4 ">
                 {/* <span className="">Email</span> */}
                 <input
                   type="text"
                   placeholder="Masukan email anda"
-                  className="max-w-md px-2 py-2 rounded-md w-80 h-9"
+                  className="max-w-md px-2 py-2 rounded-md w-80 h-9 flex"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-            </div>
-            <div className="mt-4">
-              <div className="px-4 ">
+              <div className="px-4 mt-4">
                 {/* <p>Password</p> */}
                 <input
                   type="password"
@@ -89,16 +87,16 @@ const SignInForm = () => {
               </div>
             </div>
             <button
-              className="p-3 mx-auto mt-4 mb-4  flex items-center text-gray-700 bg-[#D5DFF6] rounded-lg w-64"
+              className="p-3 mx-auto mt-4 mb-4  flex items-center justify-center text-gray-700 bg-[#D5DFF6] rounded-lg w-64"
               onClick={onSubmit}
             >
               Sign In
             </button>
             <Link
               to="/sign-up"
-              className="mx-auto mb-4 ml-4 text-blue-600 underline underline-offset-4"
+              className="mx-auto mb-4 ml-4 text-sm text-blue-600 underline underline-offset-4"
             >
-              Belum Punya Akun
+              Belum Punya Akun ?
             </Link>
           </div>
         </div>

@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { setSignUp } from '../../services/auth';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { setSignUp } from "../../services/auth";
+import { useNavigate } from "react-router-dom";
+// import "../../assets/css/login.css";
 
 const SignUpForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -17,27 +18,27 @@ const SignUpForm = () => {
     };
     console.log(data);
     if (!name || !password || !name) {
-      alert('Masukan nama, password, email anda');
+      alert("Masukan nama, password, email anda");
     } else {
       const response = await setSignUp(data);
       if (response.error) {
         alert(response.message);
       } else {
-        alert('Sign Up Success!');
-        navigate('/sign-in');
+        alert("Sign Up Success!");
+        navigate("/sign-in");
       }
     }
   };
 
   return (
-    <div className="container flex items-center justify-center w-full h-screen mx-auto bg-slate-white">
+    <div className="container flex items-center justify-center w-full h-screen mx-auto">
       <div className="flex justify-center w-full h-2/3">
         <img
-          src="/images/sign.jpg"
+          src="/images/sign-2.jpg"
           alt=""
           className="relative z-0 h-full w-96 left-3"
         />
-        <div className="z-10 w-full max-w-lg bg-gray-300 rounded-s-xl ">
+        <div className="z-10 w-full max-w-lg bg-white rounded-s-xl ">
           <div className="flex-col justify-center mt-4">
             <h1 className="py-3 mb-4 font-sans text-3xl font-semibold text-center text-gray-700">
               Create Account
@@ -65,7 +66,7 @@ const SignUpForm = () => {
             <span className="flex justify-center mb-4 text-sm text-gray-600">
               -OR-
             </span>
-            <div className="">
+            <div className="flex flex-col items-center">
               <div className="gap-2 px-4 ">
                 {/* <p>Nama</p> */}
                 <input
@@ -76,8 +77,7 @@ const SignUpForm = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-            </div>
-            <div className="justify-center ">
+
               <div className="px-4 ">
                 {/* <p>Email</p> */}
                 <input
@@ -88,8 +88,7 @@ const SignUpForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-            </div>
-            <div className="justify-center ">
+
               <div className="px-4">
                 {/* <p>Password</p> */}
                 <input
@@ -103,7 +102,7 @@ const SignUpForm = () => {
             </div>
 
             <button
-              className="p-3 mx-auto mt-4 mb-4  flex items-center text-gray-700 bg-[#D5DFF6] rounded-lg w-64"
+              className="p-3 mx-auto mt-4 mb-4 flex items-center justify-center text-gray-700 bg-[#D5DFF6] rounded-lg w-64"
               onClick={onSubmit}
             >
               Create Account

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 const Calendar = () => {
   const [selectedRange, setSelectedRange, setSelectedDate, selectedDate] =
     useState({
@@ -42,28 +42,28 @@ const Calendar = () => {
         <div
           key={i}
           className={`text-center p-2 cursor-pointer hover:bg-blue-400 ${
-            isCurrentMonth ? 'text-gray-800' : 'text-gray-400'
-          } ${isWithinSelectedRange(date) ? 'bg-blue-500 text-white' : ''}`}
+            isCurrentMonth ? "text-gray-800" : "text-gray-400"
+          } ${isWithinSelectedRange(date) ? "bg-blue-500 text-white" : ""}`}
           onClick={() => handleDateClickRange(date)}
         >
           {i}
-        </div>,
+        </div>
       );
-      days.push(
-        <div
-          key={i}
-          className={`text-center p-2 cursor-pointer ${
-            isCurrentMonth ? 'text-gray-800' : 'text-gray-400'
-          } ${
-            date.toDateString() === selectedDate.toDateString()
-              ? 'bg-blue-500 text-white'
-              : ''
-          }`}
-          onClick={() => handleDateClick(date)}
-        >
-          {i}
-        </div>,
-      );
+      // days.push(
+      //   <div
+      //     key={i}
+      //     className={`text-center p-2 cursor-pointer ${
+      //       isCurrentMonth ? 'text-gray-800' : 'text-gray-400'
+      //     } ${
+      //       date.toDateString() === selectedDate.toDateString()
+      //         ? 'bg-blue-500 text-white'
+      //         : ''
+      //     }`}
+      //     onClick={() => handleDateClick(date)}
+      //   >
+      //     {i}
+      //   </div>,
+      // );
     }
 
     return days;

@@ -1,10 +1,12 @@
-import React from 'react';
-import SignUpForm from '../components/SignUpForm';
+import React from "react";
+import SignUpForm from "../components/SignUpForm";
 
 const SignUp = () => {
   return (
     <>
-      <SignUpForm />
+      <div style={{ background: "#D3D3D3" }}>
+        <SignUpForm />
+      </div>
     </>
   );
 };
