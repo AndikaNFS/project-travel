@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Content() {
   return (
@@ -11,9 +12,11 @@ function Content() {
         India
       </p>
       <div className="flex">
-        <div className="w-96 flex justify-start mt-4">
-          <button className="bg-red-500 p-2 rounded-xl w-64">Book Now</button>
-        </div>
+        <Link to={"/home2"}>
+          <div className="w-96 flex justify-start mt-4">
+            <button className="bg-red-500 p-2 rounded-xl w-64">Book Now</button>
+          </div>
+        </Link>
       </div>
     </div>
   );

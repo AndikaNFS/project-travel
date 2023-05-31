@@ -9,7 +9,7 @@ function Header() {
           <img src="/images/moonton.svg" alt="" />
         </div>
         <div className="flex text-gray-700 text-xl font-semibold">
-          <a href="#" className="mr-2 ml-2 hover:text-gray-300">
+          <a href="/" className="mr-2 ml-2 hover:text-gray-300">
             Home
           </a>
           <a href="#" className="mr-2 ml-2 hover:text-gray-300">

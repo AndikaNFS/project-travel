@@ -25,7 +25,7 @@ const SignInForm = () => {
       const token = response.data.token;
       const tokenBase64 = btoa(token);
       Cookies.set("token", tokenBase64, { expires: 1 });
-      navigate("/home");
+      navigate("/home2");
     }
   };
   return (
