@@ -49,7 +49,7 @@ function Tiket() {
             <div className="p-1.5 bg-blue-600 rounded-full mr-2"></div>
             <h4 className="text-lg">Pilihan Tiket</h4>
           </div>
-          <div className="flex relative mt-4">
+          <div className="flex relative mt-4 ml-4">
             {tikets.map((tiket) => (
               <div
                 key={tiket.name}
@@ -63,7 +63,7 @@ function Tiket() {
                   {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
-                className="h-5 w-5 absolute bottom-0 right-0 m-2"
+                className="h-5 w-5 absolute bottom-0 right-0 m-2"=
                 >
                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
               </svg> */}
@@ -147,7 +147,7 @@ function Tiket() {
             <div className="p-1.5 bg-blue-600 rounded-full mr-2"></div>
             <h4 className="text-lg">Titik Pertemuan</h4>
           </div>
-          <div className="z-0">
+          <div className="">
             <Map />
             <span>Alamat: Canggu, Kabupaten Badung, Bali</span>
           </div>
