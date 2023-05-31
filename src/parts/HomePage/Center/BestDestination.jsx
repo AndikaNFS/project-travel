@@ -4,6 +4,9 @@ import {
   AdjustmentsVerticalIcon,
 } from "@heroicons/react/24/outline";
 
+// import fetch from "../../../helpers/fetch";
+// import useAsync from "../../../helpers/hooks/useAsync";
+
 const bestDestinations = [
   {
     name: "Guttannen",
@@ -29,6 +32,13 @@ const bestDestinations = [
 ];
 
 function BestDestination() {
+  // const { data, status, error, run, isLoading } = useAsync({});
+
+  // useEffect(() => {
+  //   run(fetch({ url: "/api/categories/?page=1&limit=4" }));
+  // }, [run]);
+  // console.log(data, status, error);
+
   return (
     <div className="p-5">
       <div className="flex justify-between">
@@ -58,6 +68,32 @@ function BestDestination() {
         </div>
       </div>
       <ul class="max-w-md mt-3">
+        {/* {data.data.map((item, index) => {
+          <li key={item.id} class="pb-3 sm:pb-4">
+          <div class="flex items-center justify-between space-x-4">
+            <div class="flex-shrink-0">
+              <img
+                class="w-20 h-20 rounded-xl"
+                src={`/images/${item.image}`}
+                alt="Neil image"
+              />
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-xl font-medium text-gray-900 truncate dark:text-black">
+                {bestDesti.name}
+              </p>
+              <p class="text-sm text-gray-500 truncate dark:text-gray-400 flex">
+                <MapPinIcon className="h-5 w-5" />
+                {bestDesti.location}
+              </p>
+            </div>
+            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-black">
+              <div className="flex justify-end">{bestDesti.price}/Day</div>
+            </div>
+          </div>
+        </li>
+        })} */}
+
         {bestDestinations.map((bestDesti) => (
           <li key={bestDesti.name} class="pb-3 sm:pb-4">
             <div class="flex items-center justify-between space-x-4">

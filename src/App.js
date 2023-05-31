@@ -8,6 +8,8 @@ import RequestResetPassword from './pages/request-reset-password';
 import ResetPassword from './pages/reset-password';
 
 import Welcome from './pages/Welcome';
+import HomePage_2 from './pages/HomePage_2';
+import DetailProduct from './pages/DetailProduct';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="reset-password/:id/:token" element={<ResetPassword />} />
 
         <Route path="/home" element={<HomePage />} />
+        <Route path="/home2" element={<HomePage_2 />} />
+        <Route path="/detail" element={<DetailProduct />} />
       </Routes>
     </BrowserRouter>
   );
