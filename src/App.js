@@ -11,7 +11,11 @@ import HomePage from './pages/HomePage';
 import Dashboard2 from './pages/Dashboard_2';
 import DetailProduct from './pages/DetailProduct';
 
+<<<<<<< HEAD
 console.log('push di src app develop');
+=======
+console.log('console log di src App');
+>>>>>>> 74b773e (psuh console log di src App)
 
 function App() {
   return (
