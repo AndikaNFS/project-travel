@@ -11,8 +11,6 @@ import HomePage from './pages/HomePage';
 import Dashboard2 from './pages/Dashboard_2';
 import DetailProduct from './pages/DetailProduct';
 
-console.log('push di src app develop');
-
 function App() {
   return (
     <BrowserRouter>
