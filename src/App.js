@@ -11,32 +11,6 @@ import HomePage from './pages/HomePage';
 import Dashboard2 from './pages/Dashboard_2';
 import DetailProduct from './pages/DetailProduct';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 890d20443141f8671cca7bf79553d92c2f19cba9
-console.log('push di src app develop');
-=======
-console.log('console log di src App');
->>>>>>> 74b773e (psuh console log di src App)
-<<<<<<< HEAD
-=======
-=======
-console.log('console log di src App');
-=======
-console.log('push di src app develop');
->>>>>>> origin/develop
->>>>>>> 2ba28e0f5dc262fb9f65622f11c5e2b15b0138b3
->>>>>>> 890d20443141f8671cca7bf79553d92c2f19cba9
-
->>>>>>> 9e73867 (psuh console log di src App)
-=======
-console.log('console log di src App');
-
->>>>>>> 74b773e (psuh console log di src App)
 function App() {
   return (
     <BrowserRouter>
