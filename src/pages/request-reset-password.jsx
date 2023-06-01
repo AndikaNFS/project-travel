@@ -29,7 +29,11 @@ const RequestResetPassword = () => {
       <div className="container flex items-center justify-center w-full h-screen mx-auto">
         <div className="flex flex-col items-center justify-center w-full h-2/3">
           <div className="mb-4">
-            <img src="/images/moonton.svg" alt="" className="h-100 w-100" />
+            <img
+              src="/images/img-logo-travee.png"
+              alt=""
+              className="h-100 w-100"
+            />
           </div>
           <div className="z-10 w-full max-w-lg bg-white rounded-xl ">
             <div className="flex-col justify-center mt-4">
