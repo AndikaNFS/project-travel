@@ -43,10 +43,26 @@ const Navbar = () => {
                   isActive ? 'text-text-color-2' : 'text-text-color-1'
                 }
               >
-                {item === 'tv' ? 'TV Series' : item}
+                {item}
               </NavLink>
             ))}
             <Auth />
+          </div>
+        </div>
+        <div className="fixed inset-x-0 bottom-0 h-16 px-4 text-base font-bold capitalize bg-secondary-color-2 md:hidden">
+          <div className="flex flex-row items-center justify-between gap-8 pt-3 text-2xl font-bold capitalize">
+            {['home', 'dashboard'].map((item) => (
+              <NavLink
+                key={item}
+                to={`/${item}` === '/home' ? '/' : `/${item}`}
+                className={({ isActive }) =>
+                  isActive ? 'text-text-color-2' : 'text-text-color-1'
+                }
+              >
+                {item === 'tv' ? 'TV Series' : item}
+              </NavLink>
+            ))}
+            <Auth mobile />
           </div>
         </div>
       </>

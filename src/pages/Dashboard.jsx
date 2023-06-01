@@ -3,8 +3,6 @@ import Sidebar from '../parts/HomePage/Sidebar';
 import Center from '../parts/HomePage/Center';
 import Right from '../parts/HomePage/Right';
 // import sideRight from "../parts/HomePage/sideRight";
-console.log('console log develop');
-console.log('1231');
 const Dashboard = () => {
   return (
     <div className="container pt-4 mx-auto">

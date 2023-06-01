@@ -23,13 +23,13 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route
-          path="request-reset-password"
+          path="/request-reset-password"
           element={<RequestResetPassword />}
         />
         <Route path="reset-password/:id/:token" element={<ResetPassword />} />
-        {/* 
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/home2" element={<HomePage_2 />} /> */}
+
+        <Route path="/home" element={<Dashboard />} />
+        <Route path="/home2" element={<Dashboard2 />} />
         <Route path="/detail" element={<DetailProduct />} />
       </Routes>
     </BrowserRouter>
