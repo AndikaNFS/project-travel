@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
-import { setSignIn } from "../../services/auth";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
+import { setSignIn } from '../../services/auth';
 
 const SignInForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -15,17 +15,17 @@ const SignInForm = () => {
       password: password,
     };
     if (!email || !password) {
-      alert("Masukan email dan password");
+      alert('Masukan email dan password');
     }
     const response = await setSignIn(data);
     if (response.error) {
       alert(response.message);
     } else {
-      alert("Login Berhasil");
+      alert('Login Berhasil');
       const token = response.data.token;
       const tokenBase64 = btoa(token);
-      Cookies.set("token", tokenBase64, { expires: 1 });
-      navigate("/home2");
+      Cookies.set('token', tokenBase64, { expires: 1 });
+      navigate('/home2');
     }
   };
   return (
@@ -70,7 +70,7 @@ const SignInForm = () => {
                 <input
                   type="text"
                   placeholder="Masukan email anda"
-                  className="max-w-md px-2 py-2 rounded-md w-80 h-9 flex"
+                  className="flex max-w-md px-2 py-2 rounded-md w-80 h-9"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -97,6 +97,12 @@ const SignInForm = () => {
               className="mx-auto mb-4 ml-4 text-sm text-blue-600 underline underline-offset-4"
             >
               Belum Punya Akun ?
+            </Link>
+            <Link
+              to="/request-reset-password"
+              className="mx-auto mb-4 ml-4 text-sm text-blue-600 underline underline-offset-4"
+            >
+              Lupa Password?
             </Link>
           </div>
         </div>

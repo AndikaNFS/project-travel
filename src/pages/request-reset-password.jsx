@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { setRequestResetPassword } from "../services/auth";
-import { useNavigate } from "react-router-dom";
-import "../assets/css/login.css";
+import React, { useCallback, useEffect, useState } from 'react';
+import { setRequestResetPassword } from '../services/auth';
+import { useNavigate } from 'react-router-dom';
+import '../assets/css/login.css';
 
 const RequestResetPassword = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const navigate = useNavigate();
 
   const onSubmit = async () => {
@@ -12,24 +12,28 @@ const RequestResetPassword = () => {
       email: email,
     };
     if (!email) {
-      alert("Masukan email anda!");
+      alert('Masukan email anda!');
     } else {
       const responseEmail = await setRequestResetPassword(data);
       if (responseEmail.error) {
         alert(responseEmail.message);
       } else {
-        alert("Request Reset Password Success, Check your email address!");
-        navigate("/");
+        alert('Request Reset Password Success, Check your email address!');
+        navigate('/');
       }
     }
   };
 
   return (
-    <div style={{ background: "#D3D3D3" }}>
+    <div style={{ background: '#D3D3D3' }}>
       <div className="container flex items-center justify-center w-full h-screen mx-auto">
         <div className="flex flex-col items-center justify-center w-full h-2/3">
           <div className="mb-4">
-            <img src="/images/moonton.svg" alt="" className="h-100 w-100" />
+            <img
+              src="/images/img-logo-travee.png"
+              alt=""
+              className="h-100 w-100"
+            />
           </div>
           <div className="z-10 w-full max-w-lg bg-white rounded-xl ">
             <div className="flex-col justify-center mt-4">
