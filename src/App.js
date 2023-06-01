@@ -12,10 +12,17 @@ import Dashboard2 from './pages/Dashboard_2';
 import DetailProduct from './pages/DetailProduct';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('push di src app develop');
 =======
 console.log('console log di src App');
 >>>>>>> 74b773e (psuh console log di src App)
+=======
+console.log('console log di src App');
+=======
+console.log('push di src app develop');
+>>>>>>> origin/develop
+>>>>>>> 2ba28e0f5dc262fb9f65622f11c5e2b15b0138b3
 
 function App() {
   return (
