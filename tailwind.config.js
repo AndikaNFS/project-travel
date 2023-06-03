@@ -25,6 +25,11 @@ module.exports = {
       },
     },
   },
-  plugins: [require('flowbite/plugin'), require('tw-elements/dist/plugin.cjs')],
-  darkMode: 'class',
-};
+  plugins: [
+    require('flowbite/plugin'),
+    require("tw-elements/dist/plugin.cjs"),
+    require('tailwindcss'),
+    require('autoprefixer'),
+],
+  darkMode: "class"
+}
