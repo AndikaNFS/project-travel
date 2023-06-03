@@ -11,6 +11,8 @@ import Welcome from './pages/Welcome';
 import HomePage_2 from './pages/HomePage_2';
 import DetailProduct from './pages/DetailProduct';
 
+console.log('console log di src App');
+
 function App() {
   return (
     <BrowserRouter>
