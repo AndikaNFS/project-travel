@@ -40,7 +40,7 @@ const Navbar = () => {
                 key={item}
                 to={`/${item}` === '/home' ? '/' : `/${item}`}
                 className={({ isActive }) =>
-                  isActive ? 'text-text-color-2' : 'text-text-color-1'
+                  isActive ? 'text-text-color-2 ' : 'text-secondary-color-3'
                 }
               >
                 {item}

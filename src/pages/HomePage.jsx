@@ -3,12 +3,13 @@ import Navbar from '../components/Navbar';
 import Content from '../parts/Welcome/Content';
 import Promo from '../parts/Welcome/Promo';
 import backgroundImage from './../assets/images/welcome-3.jpg';
+import LandingPage from '../components/LandingPage';
 
 function HomePage() {
   return (
     <>
       <Navbar />
-
+      <LandingPage />
       <div
         className="relative overflow-hidden"
         style={{
