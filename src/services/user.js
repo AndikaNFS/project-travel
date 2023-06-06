@@ -12,3 +12,13 @@ export async function getLandingPage() {
 
   return axiosResponse.data;
 }
+
+export async function getProductDetail(id) {
+  const url = `${ROOT_API}/${API_VERSION}/users/${id}`;
+
+  const response = await axios.get(url);
+
+  const axiosResponse = response.data;
+
+  return axiosResponse.data;
+}

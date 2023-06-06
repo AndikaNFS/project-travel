@@ -29,8 +29,8 @@ const CardSlideItem = ({ item }) => {
           </h2>
           <div className="flex flex-row gap-5 font-semibold lg:text-2xl">
             <Link
-              to={`/product/${item._id}`}
-              className="px-4 py-1 shadow-xl  bg-secondary-color-2 md:px-7 md:py-2 rounded-3xl"
+              to={`/detail/${item._id}`}
+              className="px-4 py-1 shadow-xl bg-secondary-color-2 md:px-7 md:py-2 rounded-3xl"
             >
               Book Now
             </Link>
