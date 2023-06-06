@@ -10,6 +10,7 @@ import ResetPassword from './pages/reset-password';
 import HomePage from './pages/HomePage';
 import Dashboard2 from './pages/Dashboard_2';
 import DetailProduct from './pages/DetailProduct';
+import CheckoutPage from './pages/CheckoutPage';
 
 function App() {
   return (
@@ -26,8 +27,9 @@ function App() {
         />
         <Route path="reset-password/:id/:token" element={<ResetPassword />} />
 
-        <Route path="/home" element={<Dashboard />} />
+        {/* <Route path="/home" element={<Dashboard />} /> */}
         <Route path="/home2" element={<Dashboard2 />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/detail" element={<DetailProduct />} />
       </Routes>
     </BrowserRouter>

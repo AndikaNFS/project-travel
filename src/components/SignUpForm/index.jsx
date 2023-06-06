@@ -94,7 +94,7 @@ const SignUpForm = () => {
                 <input
                   type="password"
                   placeholder="Password"
-                  className="max-w-md px-2 py-2 rounded-md w-80 h-9"
+                  className="max-w-md px-2 py-2 rounded-md w-80 h-9 "
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

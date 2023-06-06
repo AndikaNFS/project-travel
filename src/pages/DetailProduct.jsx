@@ -3,6 +3,7 @@ import Header from "../parts/HomePage_2/Header";
 import Preview from "../parts/DetailProduct/Preview";
 import Order from "../parts/DetailProduct/Order";
 import Tiket from "../parts/DetailProduct/Tiket";
+import Footer from "../parts/Footer";
 
 function DetailProduct() {
   return (
@@ -16,6 +17,9 @@ function DetailProduct() {
         <Tiket />
         <div className="h-20"></div>
         <Order />
+      </div>
+      <div className="mb-20">
+        <Footer />
       </div>
       {/* <div className="bg-white"></div> */}
     </div>
