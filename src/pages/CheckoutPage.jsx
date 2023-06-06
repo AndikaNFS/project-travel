@@ -24,16 +24,16 @@ function CheckoutPage() {
           </span>
         </div>
         <div className="flex">
-          <div className="w-full h-screen ">
+          <div className="w-full mb-12">
             <FormOrder />{" "}
           </div>
-          <div className="w-full h-screen ">
+          <div className="w-full">
             <DetailCheckout />
           </div>
         </div>
-      </div>
-      <div className="mt-32">
-        <Footer />
+        <div className="mt-24">
+          <Footer />
+        </div>
       </div>
     </div>
   );

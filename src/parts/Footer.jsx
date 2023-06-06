@@ -1,5 +1,50 @@
 import React from "react";
 
+const jelajahiDestinasi = [
+  {
+    name: "Paket Wisata",
+    link: "",
+  },
+  {
+    name: "Atraksi",
+    link: "",
+  },
+  {
+    name: "Destinasi Wisata",
+    link: "",
+  },
+  {
+    name: "Penginapan Wisata",
+    link: "",
+  },
+  {
+    name: "Kegiatan",
+    link: "",
+  },
+];
+const bantuan = [
+  {
+    name: "Tentang Travee",
+    link: "",
+  },
+  {
+    name: "Hubungi Kami",
+    link: "",
+  },
+  {
+    name: "Syarat dan Ketentuan",
+    link: "",
+  },
+  {
+    name: "Kebijakan Privasi",
+    link: "",
+  },
+  {
+    name: "FAQs",
+    link: "",
+  },
+];
+
 function Footer() {
   return (
     <div className="container mx-auto">
@@ -16,37 +61,23 @@ function Footer() {
           <h1 className="text-lg font-sans font-semibold mb-3">
             Jelajahi Destinasi
           </h1>
-          <ul className="list-none">
-            <li className="text-gray-400 hover:text-blue-500 mb-3">
-              Paket Wisata
-            </li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">Atraksi</li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">
-              Destinasi Wisata
-            </li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">
-              Penginapan
-            </li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">Kegiatan</li>
-          </ul>
+          {jelajahiDestinasi.map((menu) => (
+            <ul key={menu.name} className="list-none">
+              <li className="text-gray-400 hover:text-blue-500 mb-3">
+                {menu.name}
+              </li>
+            </ul>
+          ))}
         </div>
         <div className="w-64 h-58 ">
           <h1 className="text-lg font-sans font-semibold mb-3">Bantuan</h1>
-          <ul className="list-none">
-            <li className="text-gray-400 hover:text-blue-500 mb-3">
-              Tentang Travee
-            </li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">
-              Hubungai Kami
-            </li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">
-              Syarat dan Ketentuan
-            </li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">
-              Kebijakan Privasi
-            </li>
-            <li className="text-gray-400 hover:text-blue-500 mb-3">FAQs</li>
-          </ul>
+          {bantuan.map((menu) => (
+            <ul key={menu.name} className="list-none">
+              <li className="text-gray-400 hover:text-blue-500 mb-3">
+                {menu.name}
+              </li>
+            </ul>
+          ))}
         </div>
         <div className="w-96 h-58 ">
           <h1 className="text-lg font-sans font-semibold mb-3">
