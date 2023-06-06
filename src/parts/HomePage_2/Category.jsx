@@ -34,7 +34,9 @@ const categories = [
 function Category() {
   return (
     <div className="container mx-auto">
-      <h1 className="text-xl mt-4 mb-4">Kategori Pilihan</h1>
+      <h1 className="text-2xl mt-4 mb-4 font-sans font-semibold">
+        Kategori Pilihan
+      </h1>
       <div className="grid grid-cols-4 gap-4">
         {categories.map((category) => (
           <div key={category.name} className="">

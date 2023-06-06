@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Order() {
   return (
@@ -11,9 +12,11 @@ function Order() {
           </h4>
         </div>
         <div className="pb-2">
-          <button className="text-gray-100 text-lg font-bold w-full h-10 bg-blue-500 rounded-full">
-            Pesan
-          </button>
+          <Link to={"/checkout"}>
+            <button className="text-gray-100 text-lg font-bold w-full h-10 bg-blue-500 rounded-full">
+              Pesan
+            </button>
+          </Link>
         </div>
       </div>
     </div>
