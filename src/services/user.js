@@ -14,7 +14,7 @@ export async function getLandingPage() {
 }
 
 export async function getProductDetail(id) {
-  const url = `${ROOT_API}/${API_VERSION}/users/${id}`;
+  const url = `${ROOT_API}/${API_VERSION}/users/product/${id}`;
 
   const response = await axios.get(url);
 

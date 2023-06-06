@@ -29,7 +29,7 @@ function App() {
 
         {/* <Route path="/home" element={<Dashboard />} /> */}
         <Route path="/home2" element={<Dashboard2 />} />
-        <Route path="/detail/:id" element={<DetailProduct />} />
+        <Route path="/product/:id" element={<DetailProduct />} />
       </Routes>
     </BrowserRouter>
   );
