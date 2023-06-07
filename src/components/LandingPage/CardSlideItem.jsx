@@ -2,16 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CardSlideItem = ({ item }) => {
-  console.log(item);
-  console.log('123123123');
-
   const backgroundPhoto = item.photo[0].photos.slice(0, 1)[0].subPhotos;
   const API_IMG = process.env.REACT_APP_API_IMG;
   const bannerImg = `${API_IMG}/${backgroundPhoto}`;
 
   const posterPhoto = item.photo[0].photos.slice(1, 2)[0].subPhotos;
   const posterImg = `${API_IMG}/${posterPhoto}`;
-  console.log(item);
+
   return (
     <div
       className="relative w-full px-0 pb-4 bg-center bg-no-repeat bg-cover pt-28 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-text-color-1/60 after:absolute after:bottom-0 after:left-0 after:w-full after:h-24 after:bg-gradient-to-t after:from-text-color-1 after:to-text-color-1/5 md:py-44 "

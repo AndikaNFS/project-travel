@@ -1,5 +1,4 @@
 import callAPI from './api';
-import axios from 'axios';
 
 const ROOT_API = process.env.REACT_APP_API_BASE;
 const API_VERSION = 'api/v1';

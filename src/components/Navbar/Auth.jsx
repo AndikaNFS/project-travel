@@ -28,7 +28,7 @@ const Auth = ({ mobile }) => {
       setIsLogin(true);
     }
   }, []);
-  console.log(user.avatar);
+
   return isLogin == true ? (
     <>
       {!mobile ? (
@@ -124,6 +124,7 @@ const Auth = ({ mobile }) => {
           {['sign-in', 'sign-up'].map((item) => (
             <Link
               to={`/${item}`}
+              key={item}
               className={` py-2 px-5 rounded-xl text-base ${
                 item === 'sign-in'
                   ? ' text-text-color-1 bg-secondary-color-3 border border-secondary-color-1'

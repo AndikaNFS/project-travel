@@ -11,15 +11,15 @@ const LandingPage = () => {
     const data = await getLandingPage();
     setBannerData(data);
   }, [getLandingPage]);
-
-  const sliceData = bannerData.slice(0, 3);
+  const sortedByUpdate = bannerData.sort(
+    (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt),
+  );
+  const sliceData = sortedByUpdate.slice(0, 3);
 
   SwiperCore.use([Autoplay]);
   useEffect(() => {
     getBannerList();
   }, []);
-
-  console.log(sliceData);
   return (
     <div className="relative w-full h-full">
       <Swiper

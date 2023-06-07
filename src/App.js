@@ -11,7 +11,6 @@ import HomePage from './pages/HomePage';
 import Dashboard2 from './pages/Dashboard_2';
 import DetailProduct from './pages/DetailProduct';
 import CheckoutPage from './pages/CheckoutPage';
-console.log('test');
 
 function App() {
   return (
