@@ -17,7 +17,9 @@ function Dashboard2() {
         <BestDestination />
         <RekomenDestination />
       </div>
-      <Footer />
+      <div className="">
+        <Footer />
+      </div>
     </div>
   );
 }
