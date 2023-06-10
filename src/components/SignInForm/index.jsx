@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import { setSignIn } from '../../services/auth';
 import { toast } from 'react-toastify';
+import jwtDecode from 'jwt-decode';
 
 const SignInForm = () => {
   const [email, setEmail] = useState('');
@@ -73,6 +74,8 @@ const SignInForm = () => {
         theme: 'light',
       });
       const token = response.data.token;
+      // const token2 = jwtDecode(token);
+      // console.log(token2);
       const tokenBase64 = btoa(token);
       Cookies.set('token', tokenBase64, { expires: 1 });
       navigate('/');
