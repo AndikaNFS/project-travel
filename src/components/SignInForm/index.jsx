@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import { setSignIn } from '../../services/auth';
+import { toast } from 'react-toastify';
 
 const SignInForm = () => {
   const [email, setEmail] = useState('');
@@ -17,15 +18,60 @@ const SignInForm = () => {
     const response = await setSignIn(data);
 
     if (!email && !password) {
-      alert('Masukan email dan password');
+      toast.error('Masukan email dan password!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } else if (!email) {
-      alert('Masukan email anda!');
+      toast.error('Masukan email anda!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } else if (!password) {
-      alert('Masukan password anda!');
+      toast.error('Masukan password anda!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } else if (response.error) {
-      alert(response.message);
+      toast.info(response.message, {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } else {
-      alert('Login Berhasil');
+      toast.success('Login Berhasil!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
       const token = response.data.token;
       const tokenBase64 = btoa(token);
       Cookies.set('token', tokenBase64, { expires: 1 });
@@ -33,85 +79,6 @@ const SignInForm = () => {
     }
   };
   return (
-    // <div className="container flex flex-col justify-center w-full h-screen mx-auto">
-    //   <div className="flex justify-center w-full h-2/3">
-    //     <img
-    //       src="/images/sign-2.jpg"
-    //       alt=""
-    //       className="relative z-0 h-full w-96 left-3"
-    //     />
-    //     <div className="z-10 w-full max-w-lg bg-white rounded-s-xl ">
-    //       <div className="mt-10">
-    //         <h1 className="top-0 py-3 mb-4 font-sans text-3xl font-semibold text-center text-gray-700 ">
-    //           Sign In
-    //         </h1>
-    //         <div className="flex justify-between w-full p-3">
-    //           {/* <div className="flex bg-white"> */}
-    //           <div className="inline-flex items-center p-2 ring-1 ring-slate-400 rounded-xl">
-    //             <img
-    //               src="/images/icon-google.svg"
-    //               alt=""
-    //               className="w-6 h-6 mr-2"
-    //             />
-    //             <span>Sign up with Google</span>
-    //           </div>
-    //           <div className="inline-flex items-center p-2 ring-1 ring-slate-400 rounded-xl">
-    //             <img
-    //               src="/images/icon-facebook.png"
-    //               alt=""
-    //               className="w-6 h-6 mr-2"
-    //             />
-    //             <span>Sign up with Facebook</span>
-    //           </div>
-    //           {/* </div> */}
-    //         </div>
-    //         <span className="flex justify-center mb-4 text-sm text-gray-600">
-    //           -OR-
-    //         </span>
-    //         <div className="flex flex-col items-center">
-    //           <div className="px-4 ">
-    //             {/* <span className="">Email</span> */}
-    //             <input
-    //               type="text"
-    //               placeholder="Masukan email anda"
-    //               className="flex max-w-md px-2 py-2 rounded-md w-80 h-9"
-    //               value={email}
-    //               onChange={(e) => setEmail(e.target.value)}
-    //             />
-    //           </div>
-    //           <div className="px-4 mt-4">
-    //             {/* <p>Password</p> */}
-    //             <input
-    //               type="password"
-    //               placeholder="Enter password"
-    //               className="max-w-md px-2 py-2 rounded-md w-80 h-9"
-    //               value={password}
-    //               onChange={(e) => setPassword(e.target.value)}
-    //             />
-    //           </div>
-    //         </div>
-    //         <button
-    //           className="p-3 mx-auto mt-4 mb-4  flex items-center justify-center text-gray-700 bg-[#D5DFF6] rounded-lg w-64"
-    //           onClick={onSubmit}
-    //         >
-    //           Sign In
-    //         </button>
-    //         <Link
-    //           to="/sign-up"
-    //           className="mx-auto mb-4 ml-4 text-sm text-blue-600 underline underline-offset-4"
-    //         >
-    //           Belum Punya Akun ?
-    //         </Link>
-    //         <Link
-    //           to="/request-reset-password"
-    //           className="mx-auto mb-4 ml-4 text-sm text-blue-600 underline underline-offset-4"
-    //         >
-    //           Lupa Password?
-    //         </Link>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="fixed flex flex-col w-full md:flex-row md:h-full">
       <div className="flex flex-col items-center gap-3 pb-6 pt-9 bg-primary-color-2 md:justify-between md:pb-24 md:pt-20 md:w-2/5 xl:gap-28 xl:pt-16 xl:pb-24">
         <div className="md:px-4 md:space-y-6 xl:px-14 xl:space-y-14">
@@ -125,7 +92,7 @@ const SignInForm = () => {
 
         <img src="/images/img-sign-in.png" className="xl:w-[525px]" />
       </div>
-      <div className="flex flex-col items-center justify-center w-full md:w-3/5">
+      <div className="flex flex-col items-center justify-center w-full md:w-3/5 bg-primary-color-1">
         <div className="flex flex-col items-center w-full max-w-md pt-5 px-11 md:px-0 md:pt-0 ">
           <h1 className="pb-2 text-2xl font-extrabold xl:text-2xl">
             Sign In to Travee
