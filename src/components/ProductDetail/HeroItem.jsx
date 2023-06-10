@@ -3,6 +3,7 @@ import CardPrice from './CardPrice';
 import Cookies from 'js-cookie';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const HeroItem = ({ item }) => {
   const API_IMG = process.env.REACT_APP_API_IMG;
@@ -31,7 +32,16 @@ const HeroItem = ({ item }) => {
     if (!cookiesData) {
       navigate('/sign-in');
     } else if (ticketItem === '') {
-      alert('Silahkan pilih ticket pembelian');
+      toast.error('Silahkan pilih ticket pembelian!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } else {
       const data = {
         ticketItem,

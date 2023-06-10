@@ -79,7 +79,7 @@ const SignInForm = () => {
     }
   };
   return (
-    <div className="fixed flex flex-col w-full md:flex-row md:h-full">
+    <div className="fixed flex flex-col w-full h-full md:flex-row md:h-full">
       <div className="flex flex-col items-center gap-3 pb-6 pt-9 bg-primary-color-2 md:justify-between md:pb-24 md:pt-20 md:w-2/5 xl:gap-28 xl:pt-16 xl:pb-24">
         <div className="md:px-4 md:space-y-6 xl:px-14 xl:space-y-14">
           <Link to={`/`}>
@@ -92,7 +92,7 @@ const SignInForm = () => {
 
         <img src="/images/img-sign-in.png" className="xl:w-[525px]" />
       </div>
-      <div className="flex flex-col items-center justify-center w-full md:w-3/5 bg-primary-color-1">
+      <div className="flex flex-col items-center justify-center w-full h-full md:w-3/5 bg-primary-color-1">
         <div className="flex flex-col items-center w-full max-w-md pt-5 px-11 md:px-0 md:pt-0 ">
           <h1 className="pb-2 text-2xl font-extrabold xl:text-2xl">
             Sign In to Travee

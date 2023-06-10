@@ -19,6 +19,7 @@ const ResetPassword = () => {
     };
     const responsePassword = await setResetPassword(data);
     console.log(responsePassword);
+
     if (!password && !confirmPassword) {
       toast.error('Masukan password dan konfirmasi password!', {
         position: 'top-right',
