@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import LoginSignUp from './pages/LoginSignUp';
 import Dashboard from './pages/Dashboard';
 // import { SignUp, SignIn } from './components';
@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import Dashboard2 from './pages/Dashboard_2';
 import DetailProduct from './pages/DetailProduct';
 import CheckoutPage from './pages/CheckoutPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           element={<RequestResetPassword />}
         />
         <Route path="reset-password/:id/:token" element={<ResetPassword />} />
+
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
 
         {/* <Route path="/home" element={<Dashboard />} /> */}
         <Route path="/home2" element={<Dashboard2 />} />

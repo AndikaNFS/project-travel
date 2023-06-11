@@ -128,7 +128,7 @@ const Auth = ({ mobile }) => {
               className={` py-2 px-5 rounded-xl text-base ${
                 item === 'sign-in'
                   ? ' text-text-color-1 bg-secondary-color-3 border border-secondary-color-1'
-                  : 'text-text-color-3 bg-primary-color-1'
+                  : 'text-text-color-3 bg-secondary-color-1'
               }`}
             >
               {item === 'sign-in' ? 'Masuk' : 'Daftar'}
