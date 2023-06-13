@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         Lato: ['Lato', 'sans-serif'],
+        Montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
         'primary-color-1': '#DAE8DA',
@@ -27,9 +28,9 @@ module.exports = {
   },
   plugins: [
     require('flowbite/plugin'),
-    require("tw-elements/dist/plugin.cjs"),
+    require('tw-elements/dist/plugin.cjs'),
     require('tailwindcss'),
     require('autoprefixer'),
-],
-  darkMode: "class"
-}
+  ],
+  darkMode: 'class',
+};

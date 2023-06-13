@@ -32,6 +32,7 @@ function App() {
         <Route path="*" element={<Navigate to="/404" replace />} />
 
         {/* <Route path="/home" element={<Dashboard />} /> */}
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/home2" element={<Dashboard2 />} />
         <Route path="/product/:id" element={<DetailProduct />} />
       </Routes>

@@ -13,6 +13,24 @@ export async function getLandingPage() {
   return axiosResponse.data;
 }
 
+export async function getBestWisata() {
+  const url = `${ROOT_API}/${API_VERSION}/users/best-wisata`;
+  const response = await axios.get(url);
+
+  const axiosResponse = response.data;
+
+  return axiosResponse.data;
+}
+
+export async function getBestAtraksi() {
+  const url = `${ROOT_API}/${API_VERSION}/users/best-atraksi`;
+  const response = await axios.get(url);
+
+  const axiosResponse = response.data;
+
+  return axiosResponse.data;
+}
+
 export async function getProductDetail(id) {
   const url = `${ROOT_API}/${API_VERSION}/users/product/${id}`;
 
