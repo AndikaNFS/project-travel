@@ -3,7 +3,7 @@ import Sidebar from '../parts/HomePage/Sidebar';
 import Center from '../parts/HomePage/Center';
 import Right from '../parts/HomePage/Right';
 // import sideRight from "../parts/HomePage/sideRight";
-const Dashboard = () => {
+const Dashboard1 = () => {
   return (
     <div className="container pt-4 mx-auto">
       <div className="flex">
@@ -34,4 +34,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Dashboard1;
